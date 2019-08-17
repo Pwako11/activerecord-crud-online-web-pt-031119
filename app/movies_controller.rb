@@ -6,9 +6,19 @@
 # end                              # end
 
 def can_be_instantiated_and_then_saved
+<<<<<<< HEAD
   movie = Movie.create
   movie.title = "This is a title."
   movie.save 
+=======
+  movie = self.new
+  movie.title = hash[:title]
+  movie.release_date = hash[:release_date]
+  movie.director = hash[:director]
+  movie.lead = hash[:lead]
+  movie.in_theaters = hash[:in_theaters]
+  movie
+>>>>>>> d8b160d8bbe423e384a2b3876d113587bc7c053e
 end
 
 def can_be_created_with_a_hash_of_attributes
@@ -16,7 +26,12 @@ def can_be_created_with_a_hash_of_attributes
   lead: "Paul Newman",
   in_theaters: false
   }
+<<<<<<< HEAD
   movie = Movie.create (attributes)
+=======
+  movie = Movie.new
+  movie.save
+>>>>>>> d8b160d8bbe423e384a2b3876d113587bc7c053e
 end
 
 def can_be_created_in_a_block(args = __)
